@@ -57,7 +57,7 @@ impl Epic {
     }
 }
 
-#[derive(PartialEq, Serialize, Deserialize, Debug, Clone, Eq)]
+#[derive(PartialEq, Serialize, Deserialize, Debug, Clone, Eq, PartialOrd, Ord)]
 pub struct Story {
     pub name: String,
     pub description: String,
