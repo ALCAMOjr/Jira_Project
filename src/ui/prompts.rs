@@ -20,6 +20,7 @@ impl Prompts {
     }
 }
 
+
 fn create_epic_prompt() -> Epic {
     println!("----------------------------");
 
