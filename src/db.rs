@@ -12,8 +12,10 @@ pub struct JiraDatabase {
 }
 
 impl JiraDatabase {
-    pub fn new(database: Box<dyn Database>) -> Self {
-        JiraDatabase { database }
+    pub fn new(file_path: String) -> Self {
+        Self {
+            database: Box::new(JSONFileDatabase { file_path }),
+        }
     }
 
     pub fn read_db(&self) -> Result<DBState> {
